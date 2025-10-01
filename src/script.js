@@ -1,5 +1,4 @@
-const { ipcRenderer } = require("electron");
-
+// js
 function main() {
     show('.launchPage', false);
     show('.loginPage', true);
@@ -30,11 +29,9 @@ function login() {
         msgLogin.textContent = 'Invalid credentials!';
         msgLogin.style.color = 'maroon';
 
-        // Limpa os valores dos inputs
         user.value = '';
         pass.value = '';
 
-        // Dá foco no input do usuário
         user.focus();
     }
 }
@@ -43,7 +40,6 @@ function login() {
 const header = document.querySelector('header');
 const loadLabel = document.querySelector('#loadLabel');
 function loadingPage(origin, target, seconds = 1, string = 'Loading...') {
-    // Esconde header e a página de origem; mostra a tela de loading
     show('header', false);
     show(origin, false);
     show('.loadingPage', true);
@@ -51,13 +47,12 @@ function loadingPage(origin, target, seconds = 1, string = 'Loading...') {
     loadLabel.textContent = string;
 
     setTimeout(() => {
-    // some a tela de loading ao finalizar
     show('.loadingPage', false);
 
     if (typeof target === 'function') {
-        target();               // executa a função de destino
+        target();
     } else if (typeof target === 'string') {
-        show(target, true);     // ou mostra o seletor de destino
+        show(target, true);
     } else {
         console.warn('target deve ser função ou seletor (string).');
     }
@@ -114,4 +109,5 @@ function launch() {
     ipcRenderer.invoke("launch-exe");
   }, 5, 'Launching...');
 }
+
 
