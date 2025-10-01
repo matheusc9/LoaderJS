@@ -1,0 +1,227 @@
+/* MAIN */
+* {
+    user-select: none;
+    cursor: default;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Nata Sans", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #0f0f0f; /*ft rgba(15,10,30)*/
+  color: snow;
+  -webkit-app-region: drag;
+  font: normal 11px Arial;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+
+button, input, #forgot, select, ul, li, label, .container {
+    -webkit-app-region: no-drag;
+}
+
+
+
+header {
+    position: sticky;
+    top: 2px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    margin-bottom: 1rem;
+}
+.rainbow-line {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    /*background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);*/
+    background: linear-gradient(90deg, rgb(50, 205, 109), #4caf96, #00e1ff);
+}
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    padding-top: 2rem;
+    color: white;
+}
+header button {
+    position: absolute;
+    right: 0.2rem;
+    top: 0;
+    background: none;
+    border: none;
+    color: gray;
+}
+header button:hover, header button:focus { 
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+}
+
+
+
+/* LOGIN PAGE */
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza horizontal */
+    align-items: center;       /* centraliza vertical */
+    height: 100vh;             /* ocupa altura total da tela */
+    margin-bottom: 1rem;
+}
+.loginPage button {
+    text-align: center;
+    width: 200px;
+}
+.container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #1a1a1a;
+    color: #ddd;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+    text-align: center;
+}
+.container h1 {
+    font-size: 18px;
+    color: gray;
+}
+.container #msgLogin {
+    color: gray;
+    text-align: left;
+}
+
+
+
+/* LOADING PAGE */
+.loadingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centraliza horizontal */
+    align-items: center;       /* centraliza vertical */
+    height: 100vh;
+}
+.loading {
+    text-align: center;
+    color: white;
+}
+.loadingPage img {
+    width: 70px;
+}
+
+
+
+/* LAUNCH PAGE */
+.launchPage {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+.launchPage .container {
+    flex: 0 0 calc(50% - 0.5rem);
+    height: 200px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-align: left;
+}
+.launchPage button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    text-align: center;
+    width: 225px;
+}
+.launchPage img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+#game {
+    display: flex;
+    margin: 0;
+    align-items: flex-start;
+    align-content: flex-start;
+    font-size: 12px;
+    padding: 0.3rem;
+    gap: 1rem;
+    text-align: start;
+}
+#game .game-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+#accInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+/* BUTTON STYLE */
+button {
+    display: inline-block;
+    font-size: 12px;
+    background-color: #408b7b;
+    border-radius: 2px;
+    border: none;
+    transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+    color: snow;
+    padding: 0.5rem;
+}
+button:hover, button:focus, #game {
+    border-radius: 2px;
+    background-color: #4caf96;
+    box-shadow: 0 4px 8px rgba(76, 175, 137, 0.3);
+    color: snow;
+}
+
+/* INPUT STYLE */
+input {
+    cursor: text;
+    background-color: #0f0f0f;
+    padding: 0.4rem;
+    color: snow;
+    background-color: #151515;
+    border: 1px solid #2c2c2c75;
+    border-radius: 4px;
+}
+input:hover {
+    border: 1px solid #4caf963a;
+} input:focus {
+    border: 1px solid #4caf96cc;
+}
+
+.hidden {
+  display: none;
+}

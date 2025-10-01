@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<body>
+
+    <div class="rainbow-line"></div>
+    <header>
+        <button onclick="window.close()">✕</button>
+        <h1>GAMELOCK</h1>
+    </header>
+
+
+    <div class="loginPage">
+        <div class="container">
+            <h1>Connect</h1>
+            <input type="text" id="userTxt" placeholder="Username">
+            <input type="password" id="passTxt" placeholder="Password">
+            <p id="msgLogin"></p>
+        </div>
+
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="loadingPage">
+        <div class="loading">
+            <img src="../assets/loading.gif" alt="loading...">
+            <p id="loadLabel">Lauching...</p>
+        </div>
+    </div>
+
+    <div class="launchPage">
+        <div class="container">
+            <div id="game">
+                <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/d9/73/c7/d973c7b5-6ec4-6865-d9fa-47e2cf53f15b/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1024x1024bb.png"
+                    alt="...">
+
+                <div class="game-text">
+                    <p style="font-size: 14px;">FiveM</p>
+                    <p style="font-size: 10px; color: lightgray;">
+                        Status: <span id="statusLabel"></span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="accInfo"></div>
+        </div>
+        <button onclick="launch()"><i class="fa-solid fa-bolt"></i> Launch</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
