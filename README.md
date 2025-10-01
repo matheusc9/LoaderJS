@@ -15,7 +15,7 @@ A **modern JavaScript loader application** demonstrating a **simple authenticati
 ---
 
 ## Screenshots / Preview
-
+Note: Old version, the current version is much better. 
 ![Preview](preview.png)
 
 *Above: Example of the loader interface with modern visuals.*
