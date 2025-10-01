@@ -2,6 +2,8 @@
 
 A **modern JavaScript loader application** demonstrating a **simple authentication simulation** and application launch. Designed for **educational purposes**, this project shows how to build a clean, responsive loader interface with modern visuals using HTML, CSS, and JavaScript.
 
+- Note: in this repository only the web version is available, but it can be easily adapted for an Electron application.
+  
 ---
 
 ## Features
